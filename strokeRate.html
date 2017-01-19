@@ -84,11 +84,11 @@
 	$(document).css('cursor','pointer');
 	 let lastClick = 0;
     $(document).click(function() {
-        var d = new Date();
-        var t = d.getTime();
+        let d = new Date();
+        let t = d.getTime();
 
-        	var seconds = (((t - lastClick) % 60000) / 1000).toFixed(1);
-        	var sr = (60/seconds).toFixed(1);
+        	let seconds = (((t - lastClick) % 60000) / 1000).toFixed(1);
+        	let sr = (60/seconds).toFixed(1);
              $( ".keycode-display" ).html(sr);
 
         lastClick = t;
@@ -96,8 +96,8 @@
 
     let count = 0
     $(document).bind( "touchstart", function(e) {
-    	avar d = new Date();
-        var t = d.getTime();
+    	let d = new Date();
+        let t = d.getTime();
 
         	var seconds = (((t - lastClick) % 60000) / 1000).toFixed(1);
         	var sr = (60/seconds).toFixed(1);

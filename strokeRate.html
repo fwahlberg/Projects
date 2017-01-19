@@ -74,7 +74,7 @@
   			}
 
 		});	
- 		let count = 0
+ 		
 		/*$(document).click(function(){
    		 	count += 1;
    		 	$( ".keycode-display" ).html(count);
@@ -82,7 +82,7 @@
 		});
 		*/
 	$(document).css('cursor','pointer');
-	 var lastClick = 0;
+	 let lastClick = 0;
     $(document).click(function() {
         var d = new Date();
         var t = d.getTime();
@@ -94,8 +94,15 @@
         lastClick = t;
     });
 
+    let count = 0
     $(document).bind( "touchstart", function(e) {
-    	alert('Span Clicked!')
+    	avar d = new Date();
+        var t = d.getTime();
+
+        	var seconds = (((t - lastClick) % 60000) / 1000).toFixed(1);
+        	var sr = (60/seconds).toFixed(1);
+             $( ".keycode-display" ).html(sr);
+             count = t;
     });
  		</script>
 	</body>

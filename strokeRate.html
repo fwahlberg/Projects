@@ -21,6 +21,7 @@
 		    margin: 0;
 		    color: #424242;
 		    overflow: hidden;
+		    cursor: pointer;
 		}
 		.display {
 		    text-align: center;
@@ -41,6 +42,7 @@
 		.well{
 			text-align: center;
 		}
+
 	</style>
 	</head>
 	<body>
@@ -79,6 +81,7 @@
    		 	alert(this.timestamp);
 		});
 		*/
+	$(document).css('cursor','pointer');
 	 var lastClick = 0;
     $(document).click(function() {
         var d = new Date();

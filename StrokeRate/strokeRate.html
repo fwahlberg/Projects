@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Jquery Key Code</title>
+		<title>Stroke Rate Meter</title>
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -46,7 +46,7 @@
 	</style>
 	</head>
 	<body>
-		<h1 class="text-center">Jquery Key Code</h1>
+		<h1 class="text-center">Stroke Rate Meter</h1>
 		<div class="display">
 			<div class="wrap">
 				<p class="keycode-display"></p>
@@ -100,8 +100,9 @@
         let t = d.getTime();
 
         var seconds = (((t - count) % 60000) / 1000).toFixed(1);
-        var sr = (60/seconds).toFixed(1);
-        $( ".keycode-display" ).html(sr);
+        var sr = (60/seconds)
+        var stroke = Math.round(sr*2)/2;
+        $( ".keycode-display" ).html(stroke);
         count = t;
     });
  		</script>

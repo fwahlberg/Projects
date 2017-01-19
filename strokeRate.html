@@ -99,10 +99,10 @@
     	let d = new Date();
         let t = d.getTime();
 
-        	var seconds = (((t - lastClick) % 60000) / 1000).toFixed(1);
-        	var sr = (60/seconds).toFixed(1);
-             $( ".keycode-display" ).html(sr);
-             count = t;
+        var seconds = (((t - count) % 60000) / 1000).toFixed(1);
+        var sr = (60/seconds).toFixed(1);
+        $( ".keycode-display" ).html(sr);
+        count = t;
     });
  		</script>
 	</body>
